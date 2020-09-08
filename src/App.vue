@@ -39,7 +39,7 @@ export default {
 
 <style>
 
-.none {display: none}
+/* .none {display: none} */
 
 #toDo {
   width: 500px;

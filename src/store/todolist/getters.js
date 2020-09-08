@@ -6,5 +6,5 @@ export const getters = {
     },
     [TODO_LENGTH]: state => {
         return state.toDo.length
-    }
+    },
 }
