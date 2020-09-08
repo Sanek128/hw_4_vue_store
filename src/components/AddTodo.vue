@@ -1,7 +1,7 @@
 <template>
     <div>
         <button @click="newT" :class="none" style="margin-right: 3px"> Добавить задачу </button>
-        <h2 v-if="x" style = "background-color: red; text-align: center"> !!!  Слишком много задач, выполни что-то  !!! </h2>
+        <h2 v-if="todolength >= 10" style = "background-color: red; text-align: center"> !!!  Слишком много задач, выполни что-то  !!! </h2>
         <input v-model = "task" type="text" style="width: 350px" placeholder = "Новая задача">
     </div>
 </template>
@@ -22,7 +22,7 @@ export default {
     data() {
         return {
             task: '',
-            x: false
+            // x: false
         }
     },
 
@@ -59,9 +59,8 @@ export default {
                     console.log(this.task);
                 this.task = '';
                     console.log(this.todolength);
-                if (this.todolength >= 10) 
-                    this.x = true;
-                    // this.x = true;
+                // if (this.todolength >= 10) 
+                //     this.x = true;
             } catch(e) {
                 console.log(e);
             }

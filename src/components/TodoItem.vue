@@ -23,10 +23,6 @@ const {mapActions, mapGetters} = createNamespacedHelpers(todoListModule)
             myToDo: {
                 type: Object
             },
-            // x: {
-            //     type: Boolean,
-            //     required: true
-            // }
         },
 
         computed:{
@@ -42,9 +38,6 @@ const {mapActions, mapGetters} = createNamespacedHelpers(todoListModule)
             async del(id) {
                 try {
                     await this.delTodo(id)
-                    if (this.todolength < 10) 
-                        this.x = false;
-        // console.log(x);
                 }catch(e) {
                     console.log(e)
                 }
